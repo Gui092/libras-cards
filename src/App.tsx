@@ -1,12 +1,12 @@
 import './App.css'
-import { SinalCard } from './components/SinalCard'
+import { SinalGrid } from './components/SinalGrid'
 import { sinais } from './data/sinais'
 
 function App() {
   return (
     <main>
       <h1>Libras Cards</h1>
-      <SinalCard sinal={sinais[0]} aoClicar={console.log} />
+      <SinalGrid sinais={sinais} aoClicar={console.log} />
     </main>
   )
 }
