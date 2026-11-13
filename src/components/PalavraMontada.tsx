@@ -15,11 +15,23 @@ export function PalavraMontada({
 
   return (
     <section aria-label="Palavra formada">
-      <p aria-live="polite">{palavra.join('')}</p>
-      <button type="button" onClick={aoApagarUltimo} disabled={vazio}>
+      <p aria-live="polite" className="palavra">
+        {palavra.join('')}
+      </p>
+      <button
+        type="button"
+        onClick={aoApagarUltimo}
+        disabled={vazio}
+        className="botao"
+      >
         Apagar último
       </button>
-      <button type="button" onClick={aoLimpar} disabled={vazio}>
+      <button
+        type="button"
+        onClick={aoLimpar}
+        disabled={vazio}
+        className="botao"
+      >
         Limpar tudo
       </button>
     </section>

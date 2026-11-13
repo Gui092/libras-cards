@@ -8,7 +8,7 @@ type SinalGridProps = {
 
 export function SinalGrid({ sinais, aoClicar }: SinalGridProps) {
   return (
-    <section aria-label="Grade de sinais">
+    <section aria-label="Grade de sinais" className="grade">
       {sinais.map((sinal) => (
         <SinalCard key={sinal.id} sinal={sinal} aoClicar={aoClicar} />
       ))}
