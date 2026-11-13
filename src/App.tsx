@@ -3,6 +3,7 @@ import { SinalGrid } from './components/SinalGrid'
 import { sinais } from './data/sinais'
 import type { Caractere } from './types/sinal'
 import { useState } from 'react'
+import { PalavraMontada } from './components/PalavraMontada'
 
 const LIMITE_PALAVRA = 30
 
@@ -28,23 +29,11 @@ function App() {
     <main>
       <h1>Libras Cards</h1>
       <SinalGrid sinais={sinais} aoClicar={adicionarCaractere} />
-      <p aria-live="polite" aria-label="Palavra formada">
-        {palavra.join('')}
-      </p>
-      <button
-        type="button"
-        onClick={apagarUltimo}
-        disabled={palavra.length === 0}
-      >
-        Apagar
-      </button>
-      <button
-        type="button"
-        onClick={limparPalavra}
-        disabled={palavra.length === 0}
-      >
-        Apagar tudo
-      </button>
+      <PalavraMontada
+        palavra={palavra}
+        aoApagarUltimo={apagarUltimo}
+        aoLimpar={limparPalavra}
+      />
     </main>
   )
 }
