@@ -28,12 +28,12 @@ function App() {
   return (
     <main>
       <h1>Libras Cards</h1>
-      <SinalGrid sinais={sinais} aoClicar={adicionarCaractere} />
       <PalavraMontada
         palavra={palavra}
         aoApagarUltimo={apagarUltimo}
         aoLimpar={limparPalavra}
       />
+      <SinalGrid sinais={sinais} aoClicar={adicionarCaractere} />
     </main>
   )
 }

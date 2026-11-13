@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-.card:hover:focus-visible {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +15,15 @@
   border-radius: var(--raio);
   background: white;
   cursor: pointer;
+}
+
+.card:hover {
+  background-color: aqua;
+}
+
+.card:hover:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
 }
 
 .palavra {

@@ -1,7 +1,11 @@
+import { CARACTERES } from '../types/sinal.ts'
 import type { Sinal } from '../types/sinal.ts'
 
-export const sinais: Sinal[] = [
-  { id: '1', descricao: 'número um', imagem: '/sinais/1.webp' },
-  { id: 'A', descricao: 'letra A', imagem: '/sinais/a.webp' },
-  { id: 'B', descricao: 'letra B', imagem: '/sinais/b.webp' },
-]
+const numeros = '0123456789'
+
+
+export const sinais: Sinal[] = CARACTERES.map((caractere) => ({
+  id: caractere,
+  descricao: `${numeros.includes(caractere) ? "Número" : "Letra"}${caractere} `,
+  imagem: `/sinais/${caractere.toLowerCase()}.webp`,
+}))
